@@ -5,13 +5,30 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MultiTest {
-
+    Multi multi=new Multi();
     @Test
     void add() {
-        Multi multi=new Multi();
+
         int expected=2;
         int actual=multi.add(1,1);
         assertEquals(expected,actual,"Dfae adr");
+    }
 
+    @Test
+    void subtract() {
+    }
+
+    @Test
+    void multiply() {
+    }
+
+    @Test
+    void divide() {
+        assertThrows(ArithmeticException.class,()->Multi.divide(1,0),"divide by zero should throw");
+    }
+
+    @Test
+    void computeCircleArea() {
+        assertEquals(314.1592653589793,multi.computeCircleArea(10),"should return right circle");
     }
 }
