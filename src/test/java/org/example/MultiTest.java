@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,10 @@ class MultiTest {
         int actual=multi.add(1,1);
         assertEquals(expected,actual,"Dfae adr");
     }
-
+    @AfterEach
+    void clanup(){
+        System.out.println("Cleaning Up...");
+    }
     @Test
     void subtract() {
     }
