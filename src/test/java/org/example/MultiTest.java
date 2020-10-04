@@ -1,9 +1,6 @@
 package org.example;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,6 +20,14 @@ class MultiTest {
     @AfterEach
     void clanup(){
         System.out.println("Cleaning Up...");
+    }
+    @BeforeAll
+    static void beforeall(){
+        System.out.println("Test Started");
+    }
+    @AfterAll
+    static void afterall(){
+        System.out.println("Test Completed");
     }
     @Test
     void subtract() {
