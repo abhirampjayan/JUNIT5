@@ -3,7 +3,7 @@ package org.example;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-@TestInstance(TestInstance.Lifecycle.PER_METHOD)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class MultiTest {
     Multi multi;
     @BeforeEach
@@ -22,11 +22,11 @@ class MultiTest {
         System.out.println("Cleaning Up...");
     }
     @BeforeAll
-    static void beforeall(){
+    void beforeall(){
         System.out.println("Test Started");
     }
     @AfterAll
-    static void afterall(){
+    void afterall(){
         System.out.println("Test Completed");
     }
     @Test
