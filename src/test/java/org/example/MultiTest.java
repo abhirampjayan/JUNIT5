@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
+
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class MultiTest {
     Multi multi;
@@ -11,8 +13,10 @@ class MultiTest {
         multi=new Multi();
     }
     @Test
+    @DisplayName("D")
     void add() {
-
+        boolean g=false;
+        assumeTrue(g);
         int expected=2;
         int actual=multi.add(1,1);
         assertEquals(expected,actual,"Dfae adr");
