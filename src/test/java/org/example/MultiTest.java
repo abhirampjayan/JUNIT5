@@ -15,8 +15,8 @@ class MultiTest {
     @Test
     @DisplayName("D")
     void add() {
-        boolean g=false;
-        assumeTrue(g);
+        /*boolean g=false;
+        assumeTrue(g);*/
         int expected=2;
         int actual=multi.add(1,1);
         assertEquals(expected,actual,"Dfae adr");
